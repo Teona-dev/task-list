@@ -58,7 +58,7 @@ npm run dev
 
 http://localhost:5173
 
-Deployment
+## Deployment
 
 Проект задеплоен на Netlify:
 
