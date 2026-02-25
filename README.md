@@ -1,16 +1,65 @@
-# React + Vite
+# Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Учебное веб-приложение для управления списком задач, разработанное с использованием современной экосистемы React.
 
-Currently, two official plugins are available:
+## Технологический стек
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18 (функциональные компоненты)
+- Vite
+- React Router v6
+- Redux Toolkit
+- JSON Server (имитация REST API)
+- CSS Modules
+- Framer Motion
+- Netlify (deployment)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Архитектура
 
-## Expanding the ESLint configuration
+Проект реализован с разделением на слои:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `components/` — переиспользуемые UI-компоненты
+- `pages/` — маршрутизируемые страницы
+- `store/` — управление состоянием (Redux Toolkit)
+- `api/` — работа с REST API
+- `hooks/` — кастомные React-хуки
+- `styles/` — модульные стили (CSS Modules)
+
+---
+
+## Реализованная функциональность
+
+- CRUD-операции через JSON Server
+- Клиентская маршрутизация (React Router v6)
+- Глобальное управление состоянием (Redux Toolkit)
+- Кастомный хук `useLocalStorage`
+- Анимация добавления и удаления задач (Framer Motion)
+- Оптимизация рендеринга через `useMemo` и `useCallback`
+
+---
+
+## Локальный запуск
+
+1. Установка зависимостей:
+
+```bash
+npm install
+
+2. Запуск JSON Server:
+
+npx json-server --watch db.json --port 3001
+
+3. Запуск приложения:
+
+npm run dev
+
+Приложение доступно по адресу:
+
+http://localhost:5173
+
+Deployment
+
+Проект задеплоен на Netlify:
+
+https://vermillion-gumdrop-afdab2.netlify.app/
