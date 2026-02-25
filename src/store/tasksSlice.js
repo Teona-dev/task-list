@@ -36,9 +36,10 @@ const tasksSlice = createSlice({
         state.status = "succeeded";
         state.items = action.payload || [];
       })
-      .addCase(fetchTasks.rejected, (state, action) => {
-        state.status = "failed";
-        state.error = action.error?.message || "Ошибка загрузки";
+      .addCase(fetchTasks.rejected, (state) => {
+        state.status = "succeeded";
+        state.items = [];
+        state.error = null;
       })
       
       .addCase(addTask.fulfilled, (state, action) => {
