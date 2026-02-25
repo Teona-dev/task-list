@@ -1,0 +1,46 @@
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border: 1px solid #e6e8ee;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+
+.empty {
+  margin-top: 12px;
+  color: #666;
+  font-size: 14px;
+}
+
+.info {
+  margin-top: 10px;
+  color: #444;
+}
+
+.error {
+  margin-top: 10px;
+  color: #b00020;
+}
+
+.text {
+  color: #444;
+  line-height: 1.45;
+}
